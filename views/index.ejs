@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul>
+      <% listaServicosDesconto.forEach(itemServico => { %>
+        <li> <%=itemServico.desc%> - <%=itemServico.preco%> </li>
+      <%})%>
+
+    </ul>
+    
+  </body>
+</html>
