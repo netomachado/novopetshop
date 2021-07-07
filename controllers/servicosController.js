@@ -1,6 +1,7 @@
 
 const servicosModel = require("../models/servicosModel")
 
+
 exports.compilarListaServicos = taxaDesconto => {
     const listaServicos = servicosModel.retornarLista();
     return listaServicos.map(itemDeServico => ({
@@ -8,3 +9,9 @@ exports.compilarListaServicos = taxaDesconto => {
         preco: itemDeServico.preco * (1- taxaDesconto)
     }))
 };
+
+exports.adicionarServico = (desc, preco)=>{
+    servicosModel.adicionarServico(desc, preco);
+
+} ;
+
