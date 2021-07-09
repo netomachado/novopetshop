@@ -15,3 +15,7 @@ exports.adicionarServico = (desc, preco)=>{
 
 } ;
 
+exports.importarItemServico = itensServico =>{
+    itensServico.forEach(({ desc, preco }) => servicosModel.adicionarServico({ desc, preco}));
+}
+
